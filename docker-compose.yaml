@@ -1,0 +1,11 @@
+version: "2.0"
+services:
+    iptables_exporter:
+        build: .
+        user: root
+        privileged: true
+        network_mode: host
+        pid: host
+        container_name: iptables_exporter
+        stdin_open: true # docker run -i
+        tty: true        # docker run -t
